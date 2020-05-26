@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'main/main_page.dart';
@@ -19,7 +20,7 @@ class CupertinoStoreApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
-    return new MainPage();
+    return new MaterialApp(home: MainPage(),);
   }
 }
 

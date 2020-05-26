@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:cuertino_app/main/TimeViewModel.dart';
 import 'package:cuertino_app/main/main_page.dart';
 import 'package:cuertino_app/main/time_vo.dart';
 import 'package:flutter/cupertino.dart';
@@ -32,8 +31,8 @@ class MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
-        child: Container(
+    return Scaffold(
+        body: Container(
       width: double.infinity,
       height: double.infinity,
       color: Color(0xcc000000),
