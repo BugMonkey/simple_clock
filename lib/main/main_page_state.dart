@@ -37,6 +37,7 @@ class MainPageState extends State<MainPage> {
       width: double.infinity,
       height: double.infinity,
       color: Color(0xcc000000),
+      alignment: Alignment.center,
       child: StreamBuilder<TimeVo>(
         stream: timeStream,
         builder: (BuildContext context, AsyncSnapshot<TimeVo> snapshot) {
