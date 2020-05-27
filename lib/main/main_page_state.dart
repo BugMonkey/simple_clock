@@ -1,9 +1,10 @@
 import 'dart:async';
 
-import 'package:cuertino_app/main/main_page.dart';
-import 'package:cuertino_app/main/time_vo.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+import 'main_page.dart';
+import 'time_vo.dart';
 
 class MainPageState extends State<MainPage> {
   Stream<TimeVo> timeStream;
@@ -11,8 +12,9 @@ class MainPageState extends State<MainPage> {
   @override
   void initState() {
     super.initState();
+    //隐藏状态栏
+    SystemChrome.setEnabledSystemUIOverlays([]);
     timeStream = timer();
-
   }
 
   ///当前时间
@@ -24,15 +26,14 @@ class MainPageState extends State<MainPage> {
           dateTime.month.toString(),
           dateTime.day.toString(),
           dateTime.hour.toString(),
-          dateTime.minute.toString(),
-          dateTime.second.toString());
+          "${dateTime.minute < 10 ? "0" : ""}${dateTime.minute.toString()}",
+          "${dateTime.second < 10 ? "0" : ""}${dateTime.second.toString()}");
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Container(
+    return Container(
       width: double.infinity,
       height: double.infinity,
       color: Color(0xcc000000),
@@ -41,14 +42,19 @@ class MainPageState extends State<MainPage> {
         stream: timeStream,
         builder: (BuildContext context, AsyncSnapshot<TimeVo> snapshot) {
           TimeVo vo = snapshot.data;
-          return Text(
-            "${vo.hour}:${vo.min}:${vo.second}",
-            style: TextStyle(fontSize: 20, color: Colors.white12),
-          );
+          if (vo == null) {
+            return Container();
+          } else {
+            return Text(
+              "${vo?.hour}:${vo?.min}:${vo?.second}",
+              style: TextStyle(
+                  fontSize: 100,
+                  color: Colors.white,
+                  fontFamily: "Ewert"),
+            );
+          }
         },
       ),
-    ));
+    );
   }
-
-
 }

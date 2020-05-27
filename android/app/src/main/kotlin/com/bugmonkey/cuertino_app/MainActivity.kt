@@ -1,4 +1,4 @@
-package com.bugmonkey.cuertino_app
+package com.bugmonkey.simple_clock
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity

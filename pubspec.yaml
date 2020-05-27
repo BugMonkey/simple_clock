@@ -1,5 +1,5 @@
-name: cuertino_app
-description: A new Flutter application.
+name: simple_clock
+description: A new clock  Flutter application.
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -39,7 +39,11 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
-
+  fonts:
+    - family: Ewert
+      fonts:
+        # https://fonts.google.com/specimen/Ewert
+        - asset: fonts/AdventPro-SemiBold.ttf
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg

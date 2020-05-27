@@ -1,6 +1,8 @@
 import 'dart:async';
 
-import 'package:cuertino_app/main/time_vo.dart';
+import 'time_vo.dart';
+
+
 
 class TimeViewModel {
   StreamController<TimeVo> _controller;
