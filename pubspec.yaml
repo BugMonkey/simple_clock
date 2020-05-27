@@ -44,6 +44,19 @@ flutter:
       fonts:
         # https://fonts.google.com/specimen/Ewert
         - asset: fonts/AdventPro-SemiBold.ttf
+        - asset: fonts/AdventPro-ExtraLight.ttf
+        - asset: fonts/AdventPro-Light.ttf
+        - asset: fonts/AdventPro-Medium.ttf
+        - asset: fonts/AdventPro-Thin.ttf
+    - family: AmaticSC
+      fonts:
+        # https://fonts.google.com/specimen/Ewert
+        - asset: fonts/AmaticSC-Bold.ttf
+        - asset: fonts/AmaticSC-Regular.ttf
+    - family: Orbitron
+      fonts:
+        - asset: fonts/Orbitron-VariableFont_wght.ttf
+
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg

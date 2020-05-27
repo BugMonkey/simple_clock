@@ -50,7 +50,9 @@ class MainPageState extends State<MainPage> {
               style: TextStyle(
                   fontSize: 100,
                   color: Colors.white,
-                  fontFamily: "Ewert"),
+                  fontFamily: "Orbitron",
+              fontStyle: FontStyle.italic,
+              decoration: TextDecoration.none),
             );
           }
         },
