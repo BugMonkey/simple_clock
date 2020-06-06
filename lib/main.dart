@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:simple_clock/themes.dart';
 
 import 'main/main_page.dart';
 
@@ -20,7 +21,9 @@ class CupertinoStoreApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
-    return new MaterialApp(home: MainPage());
+    return new MaterialApp(home: MainPage(),
+    theme: themeData,
+    );
   }
 }
 

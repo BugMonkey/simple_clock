@@ -11,6 +11,7 @@
         >
         <activity
             android:name="com.bugmonkey.simple_clock.MainActivity"
+
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
